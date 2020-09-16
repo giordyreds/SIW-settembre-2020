@@ -69,6 +69,8 @@ public class BookController {
 		
 		List<Room> roomList = this.roomService.retrieveRoomsBySeats(roomForm.getSeats());
 		
+		roomList.removeIf(room->room.isBooked()==true);
+		
 		model.addAttribute("roomList", roomList);
 
 		model.addAttribute("roomForm", roomForm);
