@@ -26,8 +26,7 @@ public class User {
 	@Column(nullable = false, length = 100)
 	private String lastName;
 	
-	@OneToMany(/*fetch = FetchType.EAGER, */cascade = CascadeType.REMOVE, mappedBy = "booker") //mappedBy booker
-	//@JoinColumn(name = "users_id")
+	@OneToMany(cascade = CascadeType.REMOVE, mappedBy = "booker")
 	private List<Book> myBooks;
 	
 	public User() {

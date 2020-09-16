@@ -13,11 +13,6 @@ public interface RoomRepository extends CrudRepository<Room, Long>{
 
 	public Optional<Room> findByNumber(String number);
 
-	//public List<Room> findByBooker(User booker);
-	
-	//public List<Room> findByBooked(boolean booked);
-	
 	public List<Room> findBySeats(Integer seats);
-
 	
 }

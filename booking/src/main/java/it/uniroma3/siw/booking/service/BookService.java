@@ -26,24 +26,6 @@ public class BookService {
 		Optional<Book> result = this.bookRepository.findById(id);
 		return result.orElse(null);
 	}
-	
-	/*@Transactional
-	public Book getBook(Room room) {
-		Optional<Book> result = this.bookRepository.findByRoom(room);
-		return result.orElse(null);
-	}*/
-	
-	/*@Transactional
-	public Book getBookByCheckin(LocalDate checkin) {
-		Optional<Book> result = this.bookRepository.findByCheckin(checkin);
-		return result.orElse(null);
-	}*/
-
-	/*@Transactional
-	public Book getBookByCheckout(LocalDate checkout) {
-		Optional<Book> result = this.bookRepository.findByCheckout(checkout);
-		return result.orElse(null);
-	}*/
 
 	@Transactional
 	public void deleteBook(Book book) {

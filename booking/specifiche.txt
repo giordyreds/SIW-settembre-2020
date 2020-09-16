@@ -1,0 +1,50 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Casi d'uso : User
+
+a) Registering
+    1. Utente si vuole registrare al sistema.
+    2. Sceglie l'opzione 'Register'.
+    3. Compila i campi Username:Password:Nome:Cognome.
+    4. Conferma la registrazione e il sistema verifica che i dati inseriti soddisfino i requisiti necessari restituendo una pagina di successo, se i dati non soddisfano il sistema, viene specificato il problema.
+
+b) Authentication
+    1. L'utente registrato puo fare il Login autenticandosi.
+    2. Andando sul Login inserisce Username e Password.
+    3. Il Sistema verifica che i dati inseriti siano corretti e porta l'utente alla pagina home.
+
+c) Profile
+    1. L'utente autenticato visualizza il suo profilo scegliendo l'opzione 'Profile'.
+    2. Viene visualizzata una pagina che mostra Username, Nome, Cognome, Ruolo.
+    
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Casi d'uso : Room
+
+a) Create new Room
+    1. L'admin puó creare una nuova stanza dalla vista dedicata solo all'admin.
+    2. Andando su 'Create new room' si possono aggiungere tutti i dati relativi alla stanza da creare
+    3. Il sistema verifica che i dati siano corretti e porta l'admnin alla lista delle stanze giá esistenti.
+
+b) View all empty rooms
+	1. L'admin puó visualizzare una lista delle stanze senza prenotazione.
+
+c) Find by date
+	1.L'admin puó cercare la stanza tramite data.
+	2.Dalla vista si puó scegliere di cercare tramite data di checkin o di checkout.
+	3.Viene stampata una lista delle camere filtrate tramite i criteri scelti.
+
+
+		
+-------------------------------------------------------------------------------------------------------------------------------------------------------- 
+    
+Casi d'uso : Book
+
+a) My books
+    1. L'utente vuole vedere le sue prenotazioni.
+    2. Andando sulla voce 'My books' viene portato ad una pagina che contiene la lista delle sue prenotazioni.
+
+b) Book a room
+	1.L'utente puó cercare una stanza tramite il numero di posti.
+	2.Si possono vedere le info della camera scelta.
+	3.Cliccando su 'book' si possono scegliere la data di checkin e di checkout.

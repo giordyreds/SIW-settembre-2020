@@ -10,9 +10,7 @@ public class MainController {
 
 	public MainController() {
 	}
-	
-	//il main controller quando si digita localhost:8080 reindirizza alla welcome page
-	//che dá la possibilita di fare il login o la registrazione
+
 	@RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
 	public String index(Model model) {
 		return "index";

@@ -44,22 +44,6 @@ public class RoomService {
 		return list;
 	}
 	
-	/*public List<Room> retrieveRoomsBooked(boolean booked) {
-		Iterable<Room> iterable = this.roomRepository.findByBooked(booked);
-		ArrayList<Room> list = new ArrayList<>();
-		for(Room room : iterable)
-				list.add(room);
-		return list;
-	}
-	
-	public List<Room> retrieveRoomsNotBooked(boolean booked) {
-		Iterable<Room> iterable = this.roomRepository.findByBooked(booked);
-		ArrayList<Room> list = new ArrayList<>();
-		for(Room room : iterable) 
-			list.add(room);
-		return list;
-	}*/
-	
 	public List<Room> retrieveRoomsBySeats(Integer seats) {
 		Iterable<Room> iterable = this.roomRepository.findBySeats(seats);
 		ArrayList<Room> list = new ArrayList<>();
@@ -67,13 +51,5 @@ public class RoomService {
 			list.add(room);
 		return list;
 	}
-	
-	/*public List<Room> retrieveRoomByBooker(User booker) {
-		Iterable<Room> iterable = this.roomRepository.findByBooker(booker);
-		ArrayList<Room> list = new ArrayList<>();
-		for(Room room : iterable) 
-			list.add(room);
-		return list;
-	}*/
 	
 }
