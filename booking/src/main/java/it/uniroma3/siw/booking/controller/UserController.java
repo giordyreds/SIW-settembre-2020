@@ -35,7 +35,9 @@ public class UserController {
     @RequestMapping(value = {"/home"}, method = RequestMethod.GET)
     public String home(Model model) {
     	User loggedUser = sessionData.getLoggedUser();
+    	Credentials loggedCredentials = sessionData.getLoggedCredentials();
     	model.addAttribute("loggedUser", loggedUser);
+    	model.addAttribute("loggedCredentials", loggedCredentials);
     	return "home";
     }
     

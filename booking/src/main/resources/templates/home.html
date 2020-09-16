@@ -12,7 +12,7 @@
 <h4><a href="/myBooks">My books</a></h4>
 <h4><a href="/users/me">Profile</a></h4>
 <h4><a href="/logout">Logout</a></h4>
-<h4><a href="/admin">ADMIN</a></h4>
+<h4 th:if="${loggedCredentials.role == 'RECEPTION'}"><a href="/admin">ADMIN</a></h4>
 
 </body>
 </html>
