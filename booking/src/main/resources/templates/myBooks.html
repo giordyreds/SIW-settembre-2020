@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Booking</title>
+</head>
+<body>
+	<h1>My rooms</h1>
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>Number</th>
+				<th>Checkin</th>
+				<th>Checkout</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each ="book : ${bookList}">
+				<td><a th:href="'/myBooks/'+ ${book.room.id}" th:text="${book.room.number}">...</a></td>
+				<td th:text="${book.checkin}"></td>
+				<td th:text="${book.checkout}"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	<footer>
+		<h4><a th:href="@{/home}">Home</a></h4>
+	</footer>
+</body>
+</html>

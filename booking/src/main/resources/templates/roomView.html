@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/html"
+      xmlns:th="htpps://www.thymelead.org">
+<head>
+    <title>Booking</title>
+</head>
+<body>
+    <table>
+        <tr>    
+            <td>        
+                <h1>Room number: </h1>
+            </td>
+            <td>
+                <h1 th:text="${room.number}"></h1>
+            </td>
+        </tr>
+        <!-- <tr>
+            <td>
+                <h4 th:if="${room.booked}" th:text="${room.booker.firstName}+' ' + ${room.booker.lastName}"></h4>
+           
+                <h4 th:unless="${room.booked}">Not booked</h4>
+            </td>
+        </tr> -->
+        <tr>
+            <td>
+                <h4 th:text="${room.description}" style="color:gray"></h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Seats:</h4>
+            </td>
+            <td>
+                <h4 th:text="${room.seats}"></h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Beds:</h4>
+            </td>
+            <td>
+                <h4 th:text="${room.beds}"></h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Beds:</h4>
+            </td>
+            <td>
+                <h4 th:text="${room.beds}"></h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Single beds:</h4>
+            </td>
+            <td>
+                <h4 th:text="${room.singleBeds}"></h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Double beds:</h4>
+            </td>
+            <td>
+                <h4 th:text="${room.doubleBeds}"></h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Price:</h2>
+            </td>
+            <td>
+                <h2 th:text="${room.price}"></h2>
+            </td>
+        </tr>
+        <tr>
+        	<td>
+            	<p><a th:href="@{'/bookRoom/roomView/'+${room.id}+'/book'}"><button class="button2">BOOK</button></a></p>
+        	</td>
+        </tr>
+    </table>
+    <!-- <div th:if="${room.booked}" style="color:green">FULL</div>
+    <div th:unless="${room.booked}" style="color:red">EMPTY</div> -->
+    <footer>
+        <h4><a th:href="@{/home}">Home</a></h4>
+    </footer>
+    <footer>
+        <h4><a th:href="@{/bookRoom}">BACK</a></h4>
+    </footer>
+</body>
+</html>

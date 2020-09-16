@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+      <title>Booking</title>
+</head>
+
+<body>
+<h1>Create new Room</h1>
+<form id = "roomForm"
+	  th:action="@{/rooms/add}"
+	  th:object="${roomForm}"
+	  method="post"	>
+	  
+<table>
+	<tr>
+		<td><label for="roomNumberInput" >Room Number</label></td>
+		<td><input id=roomNumberInput type="text" placeHolder="NUMBER" required th:field="*{number}"/></td>
+		<td th:if="${#fields.hasErrors('number')}" th:errors="*{number}" th:style="'color:red'"></td>
+	</tr>
+	<tr>
+		<td><label for="roomDescriptionInput" >Description</label></td>
+		<td><input id=roomDescriptionInput type="text" placeHolder="DESCRIPTION" th:field="*{description}"/></td>
+		<td th:if="${#fields.hasErrors('description')}" th:errors="*{description}" th:style="'color:red'"></td>
+	</tr>
+	<tr>
+		<td><label for="roomSeatsInput" >Seats</label></td>
+		<td><input id=roomSeatsInput placeHolder="SEATS" th:field="*{seats}"/></td>
+		<td th:if="${#fields.hasErrors('seats')}" th:errors="*{seats}" th:style="'color:red'"></td>
+	</tr>
+	<tr>
+		<td><label for="roomBedsInput" >Beds</label></td>
+		<td><input id=roomBedsInput placeHolder="BEDS" th:field="*{beds}"/></td>
+		<td th:if="${#fields.hasErrors('beds')}" th:errors="*{beds}" th:style="'color:red'"></td>
+	</tr>
+	<tr>
+		<td><label for="roomSingleBedsInput" >Single beds</label></td>
+		<td><input id=roomSingleBedsInput placeHolder="SINGLE BEDS" th:field="*{singleBeds}"/></td>
+		<td th:if="${#fields.hasErrors('singleBeds')}" th:errors="*{singleBeds}" th:style="'color:red'"></td>
+	</tr>
+	<tr>
+		<td><label for="roomDoubleBedsInput" >Double beds</label></td>
+		<td><input id=roomDoubleBedsInput placeHolder="DOUBLE BEDS" th:field="*{doubleBeds}"/></td>
+		<td th:if="${#fields.hasErrors('doubleBeds')}" th:errors="*{doubleBeds}" th:style="'color:red'"></td>
+	</tr>
+	<tr>
+		<td><label for="roomPriceInput" >Price</label></td>
+		<td><input id=roomPriceInput placeHolder="PRICE" th:field="*{price}"/></td>
+		<td th:if="${#fields.hasErrors('price')}" th:errors="*{price}" th:style="'color:red'"></td>
+	</tr>
+	<tr>
+		<td><button type="submit">ADD ROOM</button></td>
+	</tr>
+		
+</table>
+</form>
+	<footer>
+		<h4><a th:href="@{/admin}">ADMIN</a></h4>
+	</footer>
+</body>
+</html>

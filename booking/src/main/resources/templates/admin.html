@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+</head>
+<body>
+<h1 th:text="'Welcome, ' + ${loggedUser.firstName} + '!'"></h1>
+<h4><a href="/rooms">View all rooms</a></h4>
+<h4><a href="/notBooked">View all empty rooms</a></h4>
+<h4><a href="/dateSearch">Find by date</a></h4>
+<h4><a href="/rooms/add">Create a room</a></h4>
+<h4><a href="/admin/users">All Users List</a></h4>
+
+	<footer>
+		<h4><a th:href="@{/home}">Home</a></h4>
+	</footer>
+</body>
+</html>

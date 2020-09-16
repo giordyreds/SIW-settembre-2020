@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+</head>
+<body>
+<h1 th:text="'Welcome, ' + ${loggedUser.firstName} + '!'"></h1>
+<h4><a href="/bookRoom">Book a room</a></h4>
+<h4><a href="/myBooks">My books</a></h4>
+<h4><a href="/users/me">Profile</a></h4>
+<h4><a href="/logout">Logout</a></h4>
+<h4><a href="/admin">ADMIN</a></h4>
+
+</body>
+</html>

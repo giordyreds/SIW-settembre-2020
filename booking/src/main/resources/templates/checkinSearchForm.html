@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Booking</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+<div>
+<h1>Find a room by seats:</h1>
+</div>
+<form id = "bookForm"
+      th:action="@{'/checkinSearch'}"
+      method="POST">
+
+    <table>
+        <tr>
+            <td><label for="seatsInput">DATE:</label>
+            <td><input id=seatsInput type="date" th:field="${bookForm.checkin}" placeholder="DATE" required/></td>
+            <!-- <td th:if="${#fields.hasErrors('roomForm.seats')}" th:errors="${roomForm.seats}" th:style="'color:red'"></td> -->
+        </tr>
+    </table>
+    <button class="button" type="submit">SEARCH</button>
+</form>
+	<footer>
+		<h4><a th:href="@{/admin}">Back</a></h4>
+	</footer>
+</body>
+</html>
